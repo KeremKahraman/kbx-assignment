@@ -6,4 +6,4 @@ CREATE TABLE PROFILE_VIEWS (
   viewedAt TIMESTAMP WITH TIME ZONE NOT NULL
 );
 
-CREATE INDEX idx_viewee_user_id ON PROFILE_VIEWS(viewee_user_id);
+CREATE INDEX idx_viewee_user_id_and_time ON PROFILE_VIEWS(viewee_user_id, viewedAt);
